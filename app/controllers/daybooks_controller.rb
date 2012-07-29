@@ -1,15 +1,11 @@
 class DaybooksController < ApplicationController
 
   def index
-    @daybook = Daybook.all
-
-    respond_to do |format|
-      format.html
-    end
+    @daybooks = Daybook.all
   end
 
   def show
-    @user = Daybook.find(params[:id])
+    @daybook = Daybook.find(params[:id])
 
     respond_to do |format|
       format.html
@@ -57,6 +53,8 @@ class DaybooksController < ApplicationController
   end
 
   def destroy
+    @daybook.logo = nil
+    @daybook.save
     @daybook = Daybook.find(params[:id])
     @daybook.destroy
 
