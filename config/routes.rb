@@ -1,7 +1,7 @@
 DaybookSpectrum::Application.routes.draw do
   resources :daybooks
 
-
+  root :to => "daybooks#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
