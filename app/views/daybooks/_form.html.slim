@@ -1,0 +1,6 @@
+.form = form_for @daybook, :url => daybooks_path, :html => { :multipart => true } do |form|
+  div = form.label :name
+  .name_field = form.text_field :name
+  div = form.label :logo
+  .logo_field = form.file_field :logo
+  .submit_button = form.submit

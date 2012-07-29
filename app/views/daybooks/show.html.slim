@@ -1,0 +1,6 @@
+.show
+  div= image_tag @daybook.logo.url(:thumb)
+  div= @daybook.name
+  div class="links_container"
+    p = link_to("edit", edit_daybook_path)
+    p = link_to("back", daybooks_path)
