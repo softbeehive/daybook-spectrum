@@ -1,4 +1,6 @@
 DaybookSpectrum::Application.routes.draw do
+  get "scientists/new"
+
   resources :daybooks
 
   root :to => "daybooks#index"
