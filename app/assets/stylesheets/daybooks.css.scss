@@ -22,6 +22,12 @@
   font-family: PTMonoRegular, Arial, Helvetica;
   padding: 20px;
 }
+.site-name {
+  width: 100%;
+  clear: both;
+  float: left;
+  text-align: center;
+}
 
 .daybook_containers {
   width: 20%;
@@ -31,7 +37,10 @@
 }
 
 .logo_container {
-  min-height: 64px;
+  min-height: 75px;
+  img {
+    vertical-align: middle;
+  }
 }
 
 h1 {
@@ -42,9 +51,20 @@ h1 {
 }
 
 .add_new {
-  float: right;
-  vertical-align: middle;
+  float: left;
+  padding: 30px 0;
+  text-align: center;
+  background: url("plus.gif") no-repeat #fff;
+  background-position: left;
+  margin-left: 43%;
+  padding-left: 30px;
 }
+
+.errors_details {
+  color: red;
+  padding-bottom: 10px;
+}
+
 $blue: #4D90FE;
 $green: #07B845;
 

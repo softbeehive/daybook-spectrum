@@ -1,4 +1,11 @@
-.form = form_for @daybook, :url => daybooks_path, :html => { :multipart => true } do |form|
+= form_for(@daybook) do |f|
+  - if @daybook.errors.any?
+    .errors_details
+      - @daybook.errors.full_messages.each do |msg|
+        div = msg
+
+
+.form = form_for @daybook, :html => { :multipart => true } do |form|
   div = form.label :name
   .name_field = form.text_field :name
   div = form.label :logo

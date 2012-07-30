@@ -45,7 +45,7 @@ class DaybooksController < ApplicationController
 
     respond_to do |format|
       if @daybook.update_attributes(params[:daybook])
-        format.html {redirect_to @daybook, notice: 'Daybook type was successfully updated'}
+        format.html {redirect_to daybooks_path, notice: 'Daybook type was successfully updated'}
       else
         format.html {render action: "edit"}
       end
@@ -54,7 +54,6 @@ class DaybooksController < ApplicationController
 
   def destroy
     @daybook.logo = nil
-    @daybook.save
     @daybook = Daybook.find(params[:id])
     @daybook.destroy
 

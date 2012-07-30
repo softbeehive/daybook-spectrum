@@ -1,6 +1,9 @@
-.add_new = link_to('Add daybook type', new_daybook_path)
+.site-name
+  = image_tag "index.jpg"
 
 - @daybooks.each do |daybook|
    div class="daybook_containers"
      div class="clearfix logo_container" = image_tag daybook.logo.url(:thumb)
      div class="clearfix" = daybook.name
+
+.add_new = link_to('Add daybook type', new_daybook_path)
