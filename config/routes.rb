@@ -1,7 +1,7 @@
 DaybookSpectrum::Application.routes.draw do
-  get "scientists/new"
 
   resources :daybooks
+  resources :scientists
 
   root :to => "daybooks#index"
   # The priority is based upon order of creation:
