@@ -1,0 +1,7 @@
+.show
+  div= @scientist.title
+  div= @scientist.date
+  div= @scientist.description
+  div class="links_container"
+    p = link_to("edit", edit_scientist_path)
+    p = link_to("back", scientists_path)

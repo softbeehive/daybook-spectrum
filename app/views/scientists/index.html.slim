@@ -1,0 +1,9 @@
+.scientists
+
+- @scientists.each do |scientist|
+   div class="scientist_containers"
+     div class="clearfix" = scientist.date
+     div class="clearfix title_container" = scientist.title
+     div class="clearfix" = scientist.description
+
+.add_new = link_to('Add scientists post', new_scientist_path)

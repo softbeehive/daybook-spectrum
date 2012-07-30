@@ -1,0 +1,15 @@
+= form_for(@scientist) do |f|
+  - if @scientist.errors.any?
+    .errors_details
+      - @scientist.errors.full_messages.each do |msg|
+        div = msg
+
+
+.form = form_for @scientist, :html => { :multipart => true } do |form|
+  div = form.label :title
+  .name_field = form.text_field :title
+  div = form.label :date
+  .date_field = form.date_select :date
+  div = form.label :description
+  .desc_field = form.text_area :description
+  .submit_button = form.submit
