@@ -1,9 +1,9 @@
 .scientists
+  h1 British scientist's last discoveries
 
 - @scientists.each do |scientist|
    div class="scientist_containers"
-     div class="clearfix" = scientist.date
      div class="clearfix title_container" = scientist.title
+     div class="clearfix date" = scientist.date
      div class="clearfix" = scientist.description
-
-.add_new = link_to('Add scientists post', new_scientist_path)
+.add_new = link_to('Add scientific post', new_scientist_path)
