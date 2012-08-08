@@ -8,6 +8,8 @@
 .form = form_for @daybook, :html => { :multipart => true } do |form|
   div = form.label :name
   .name_field = form.text_field :name
+  div = form.label :character_id
+  .name_field = form .text_field :character_id
   div = form.label :logo
   .logo_field = form.file_field :logo
   .submit_button = form.submit
