@@ -3,7 +3,7 @@ class Daybook < ActiveRecord::Base
   has_many :memberships
   has_many :scientists, :through => :memberships
 
-  attr_accessible :name, :logo
+  attr_accessible :name, :logo, :character_id
   has_attached_file :logo, :styles => { :thumb => "100x100>" }
 
   validates :name, :presence => true,

@@ -1,9 +1,8 @@
 .scientists
-  h1 British scientist's last discoveries
-
-- @scientists.each do |scientist|
-   div class="scientist_containers"
-     div class="clearfix title_container" = scientist.title
-     div class="clearfix date" = scientist.date
-     div class="clearfix" = scientist.description
-.add_new = link_to('Add scientific post', new_scientist_path)
+  h1 Warning! British scientist's last discoveries /
+  - @scientists.last(10).each do |scientist|
+    div class="scientist_container"
+      div class="date" = scientist.date
+      div class="title_container" = scientist.title
+      div class="clearfix scientist_desc" = scientist.description
+.add_new = link_to('Add scientific npost', new_scientist_path)

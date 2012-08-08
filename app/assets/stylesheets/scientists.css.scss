@@ -1,7 +1,39 @@
 // Place all the styles related to the Scientists controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$blue: #4D90FE;
+$green: #07B845;
 
-.scientist_containers {
-  padding-bottom: 10px;
+.scientists {
+  h1 {
+    padding: 10px 0;
+    color: #ff0000;
+    font-weight: normal;
+  }
+}
+
+.scientist_container {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid $green;
+}
+
+.date {
+  float: left;
+  font-size: 12px;
+  padding: 5px 10px 0 0;
+  line-height: 12px;
+  height: 15px;
+  font-family: PTMonoRegular, Arial, Helvetica;
+}
+
+.title_container {
+  float: left;
+  font-size: 18px;
+  font-family: PTSansItalic;
+}
+
+.scientist_desc {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }

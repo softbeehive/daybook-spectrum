@@ -5,7 +5,7 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'postgre'
 
 gem 'slim'
 
@@ -29,6 +29,13 @@ gem 'paperclip', '~> 3.0'
 
 # Twitter bootstrap enable
 gem 'bootstrap-sass'
+
+# RSpec testing
+group :test, :development do
+  gem "rspec-rails", "~> 2.4"
+end
+
+gem 'capybara'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
