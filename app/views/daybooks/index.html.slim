@@ -4,7 +4,7 @@
 - @daybooks.each do |daybook|
    div class="daybook_containers"
      div class="clearfix logo_container" = image_tag daybook.logo.url(:thumb)
-     div class="clearfix" = daybook.name
+     div class="clearfix" = link_to daybook.name, daybook_scientists_path(:daybook[params:id])
 
 .add_new = link_to('Add daybook type', new_daybook_path)
 .example = link_to('Британские ученые установили', scientists_path)
